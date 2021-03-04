@@ -1,0 +1,218 @@
+! $Id: .Xdefaults,v 1.2 1999/05/26 03:43:32 amos Exp $
+XCalendar*daynames.SAT*Foreground:	Maroon
+XCalendar*daynumbers.13*Foreground:	Maroon
+XCalendar*daynumbers.20*Foreground:	Maroon
+XCalendar*daynumbers.27*Foreground:	Maroon
+XCalendar*daynumbers.34*Foreground:	Maroon
+XCalendar*daynumbers.41*Foreground:	Maroon
+XCalendar*daynumbers.6*Foreground:	Maroon
+
+XPublisher*scroll.foreground:	black
+XPublisher*scroll.background:	DimGrey
+XPublisher*SpellGeometry:	-20-20
+XPublisher*PaletteGeometry:	=512x128+0-0
+XPublisher*tagColor:	Blue
+XPublisher*foreground:	black
+XPublisher*background:	white
+
+xbiff.Mailbox.width:	80
+xbiff.Mailbox.height:	80
+xbiff.Mailbox.update:	60
+xbiff.Mailbox.foreground:	black
+xbiff.Mailbox.background:	white
+
+xcalc.Foreground:	Black
+xcalc.Background:	White
+xcalc.NKeyFore:		Black
+xcalc.NKeyBack:		Yellow
+xcalc.OKeyFore:		Black
+xcalc.OKeyBack:		Orange
+xcalc.FKeyFore:		Black
+xcalc.FKeyBack:		Aquamarine
+xcalc.DispFore:		Black
+xcalc.DispBack:		White
+
+xclock*width:		80
+xclock*height:		80
+xclock*foreground:	blue
+xclock*background:	wheat
+xclock*chime:		true
+
+
+xedit*font:	9x15
+xedit.geometry:	520x720+540+70
+
+xman.bothShown:	true
+xman.directoryHeight:	60
+xman.topBox:	true
+xman.manualBrowser.foreground:	black
+xman.manualBrowser.background:	white
+
+xrn*index*cursor:         left_ptr
+xrn*Command.shapeStyle:           Oval
+xrn*Command.cornerRoundPercent:   50
+xrn*Command.width:                100
+
+xrn.newsrcFile:		~/.newsrc
+xrn.nntpServer:		news.utdallas.edu
+xrn.editorCommand:	gnumacs %s
+xrn.iconGeometry:	+64+521
+xrn.leaveHeaders:	subject,from
+xrn.Gripe.geometry:	+50+50
+
+xrn*background:		white
+xrn*foreground:		black
+xrn*font:		9x15
+xrn*border:		LightGray
+
+xrn.Information.geometry: +400+400
+
+xrn*Text*background:	white
+xrn*Text*foreground:	black
+xrn*Text*Background:	white
+xrn*Text*Foreground:	black
+xrn*ScrollBarMgr.thickness: 22
+xrn*Label.font:	-adobe-times-bold-r-normal--14-140-75-75-p-77-iso8859-1
+xrn*Command.font: -adobe-new century schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+
+xrn*dialog*font:	-adobe-new century schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1	
+xrn*dialog*borderWidth:		2
+
+xrn.confirm:			ngCatchUp,artCatchUp
+xrn.signatureFile:		~/.signature
+xrn.geometry:			=942x868+200+4
+xrn.deadLetters:		~/dead.letters
+xrn.savePostings:		~/Articles
+xrn.topLines:			9
+xrn.saveMode:			mailbox,headers
+xrn.minLines:			3
+xrn.maxLines:			6
+xrn.tmpDir:			/tmp
+xrn.mailer:			/usr/lib/sendmail -oi -t
+xrn.organization:		The University of Texas at Dallas, ACC
+
+*addQuit.label:               Quit
+*addFirst.label:              Add first
+*addLast.label:               Add last
+*addAfter.label:              Add after group
+*addUnsub.label:              Add unsubscribed
+
+*ngQuit.label:                Quit
+*ngRead.label:                Read
+*ngNext.label:                Next
+*ngPrev.label:                Prev
+*ngCatchUp.label:             Catch up
+*ngSubscribe.label:           Subscribe
+*ngUnsub.label:               Unsubscribe
+*ngGoto.label:                Goto group
+*ngAllGroups.label:           All groups
+*ngRescan.label:              Rescan
+*ngPrevGroup.label:           Prev group
+*ngSelect.label:              Select groups
+*ngMove.label:                Move
+*ngExit.label:                Exit
+*ngCheckPoint.label:          Checkpoint
+*ngPost.label:                Post
+*ngGripe.label:               Gripe
+
+*allQuit.label:               Quit
+*allSub.label:                Subscribe
+*allFirst.label:              Subscribe first
+*allLast.label:               Subscribe last
+*allAfter.label:              Subscribe after group
+*allUnsub.label:              Unsubscribe
+*allGoto.label:               Goto group
+*allSelect.label:             Select groups
+*allMove.label:               Move
+*allToggle.label:             Toggle order
+
+*artQuit.label:               Quit
+*artNext.label:               Next
+*artScroll.label:             Scroll
+*artNextUnread.label:         Next unread
+*artPrev.label:               Prev
+*artLast.label:               Last
+*artNextGroup.label:          Next group
+*artGotoArticle.label:        Goto article
+*artCatchUp.label:            Catch up
+*artMarkRead.label:           Mark read
+*artMarkUnread.label:         Mark unread
+*artUnsub.label:              Unsubscribe
+*artSubNext.label:            Subject next
+*artSubPrev.label:            Subject prev
+*artKillSession.label:        Session kill
+*artKillLocal.label:          Local kill
+*artKillGlobal.label:         Global kill
+*artKillAuthor.label:         Author kill
+*artSubSearch.label:          Subject search
+*artContinue.label:           Continue
+*artPost.label:               Post
+*artExit.label:               Exit
+*artGripe.label:              Gripe
+
+*artSave.label:               Save
+*artReply.label:              Reply
+*artForward.label:            Forward
+*artFollowup.label:           Followup
+*artCancel.label:             Cancel
+*artRot13.label:              Rot-13
+*artHeader.label:             Toggle header
+*artPrint.label:              Print
+
+*index.Translations:   #override \n\
+  <Btn2Down>:  select-start() extend-end() doTheRightThing()
+
+XRn.ngBindings: \
+  <Key>0x20:   doTheRightThing()       \n\
+  <Key>y:      doTheRightThing()       \n\
+  :<Key>u:     ngUnsub()       \n\
+  :<Key>c:     ngCatchUp()     \n\
+  <Key>n:      ngNext()        \n\
+  <Key>p:      ngPrev()        \n\
+  <Key>-:      ngPrevGroup()   \n\
+  :<Key>g:     ngGoto()        \n\
+  :<Key>L:     ngAllGroups()   \n\
+  <Key>q:      ngQuit()
+
+XRn.artBindings: \
+  <Key>0x20:   doTheRightThing()       \n\
+  :<Key>n:     doTheRightThing()       \n\
+  :<Key>N:     artNext()       \n\
+  ^<Key>N:     artSubNext()    \n\
+  <Key>P:      artPrev()       \n\
+  ^<Key>P:     artSubPrev()    \n\
+  :<Key>-:     artLast()       \n\
+  :<Key>/:     artSubSearch()  \n\
+  <Key>f:      artFollowup()   \n\
+  <Key>r:      artReply()      \n\
+  <Key>s:      artSave()       \n\
+  <Key>w:      artSave()       \n\
+  <Key>|:      artSave()       \n\
+  :<Key>C:     artCancel()     \n\
+  :<Key>v:     artHeader()     \n\
+  ^<Key>X:     artRot13()      \n\
+  :<Key>X:     artRot13()      \n\
+  :<Key>c:     artCatchUp()    \n\
+  :<Key>j:     artMarkRead()   \n\
+  <Key>m:      artMarkUnread() \n\
+  :<Key>k:     artKillSession()        \n\
+  :<Key>K:     artKillLocal()  \n\
+  :<Key>u:     artUnsub()      \n\
+  <Key>.:      artGotoArticle()        \n\
+  <Key>q:      artQuit()
+
+xterm*sunFunctionKeys:	true
+xterm.vt100.scrollBar:	false
+xterm.vt100.pointerColorBackground:	white
+xterm.vt100.scrollbar.foreground:	black
+xterm.vt100.scrollbar.background:	lightgrey
+
+! Make sure PATH gets properly set.
+XTerm*loginSession: true
+XTerm*loginShell: true
+Dtterm*loginShell: true
+
+dclock.bell:	true
+
+Mosaic*homeDocument:     http://www.utdallas.edu/
+! $Source: /warez/home/skel/src/RCS/.Xdefaults,v $

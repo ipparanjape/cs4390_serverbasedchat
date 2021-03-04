@@ -1,0 +1,16 @@
+# $Id: .tcshrc,v 1.1 1998/05/02 21:22:33 amos Exp $
+# Read by every tcsh shell
+
+set complete=enhance
+
+if ( -f ~/.cshrc ) then
+  source ~/.cshrc
+endif
+
+setenv HOSTNAME `uname -n`
+
+# This prints the hostname and current path on a window title
+if ($?DISPLAY) then 
+  alias precmd 'echo -n "]2;${HOSTNAME}:$cwd]1;${HOSTNAME}"'
+endif
+# $Source: /warez/home/skel/src/RCS/.tcshrc,v $

@@ -1,0 +1,16 @@
+# $Id: .setx,v 1.1 1998/05/02 21:21:37 amos Exp $
+setenv OPENWINHOME     /usr/local/openwin
+setenv PUBHOME         /usr/local/publisher
+
+# Generic path
+set spath       = ( /usr/lang /usr/ucb /usr/bin /usr/old /etc /usr/etc )
+set upath       = ( ~/`arch`bin . )
+set lpath       = ( /usr/local/bin /usr/local/backup/bin  )
+set xpath       = ( /usr/local/X11/bin /usr/local/bin/X11 )
+set opath       = ( $OPENWINHOME/bin $OPENWINHOME/demo /usr/local/guide/bin )
+set pubpath	= ( $PUBHOME/bin $PUBHOME/bin/`arch` )
+
+setenv LD_LIBRARY_PATH "/usr/local/X11/lib:$OPENWINHOME/lib:/usr/local/lib:/usr/lib"
+setenv MANPATH "/usr/lang/man:/usr/local/X11/man:$OPENWINHOME/share/man:/usr/local/man:/usr/share/man"
+set path = ( $xpath $opath $lpath $spath $pubpath $upath )
+# $Source: /warez/home/skel/src/RCS/.setx,v $

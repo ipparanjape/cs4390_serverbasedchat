@@ -1,0 +1,83 @@
+#
+# $Id: qtermtab,v 6.4 1994/08/15 23:50:30 mcooper Exp $
+#
+# QtermTab - Query terminal table for qterm(1).
+#
+#
+# Common Send sequences for use with +trycommon
+#
+comseq	^[Z ^[[c ^[[0c ^[[>c ^[[<0I ^E
+#
+#
+#KEY	SEND	RECEIVE		TERM	NEXT	DESCRIPTION
+#----	------- --------------- ------	------	-------------------------------
+prime	^[Z	^[[?1;0c	vt100	vt100	DEC VT100
+prime	^[Z	^[[?1;1c	vt100	vt100	DEC VT100 with STP
+prime	^[Z	^[[?1;2c	xterm	vt100	Xterm or ANSI/VT100 Clone
+prime	^[Z	^[[?1;3c	vt100	vt100	DEC VT100 with AVO and STP
+prime	^[Z	^[[?1;4c	vt100	vt100	DEC VT100 with GPO
+prime	^[Z	^[[?1;5c	vt100	vt100	DEC VT100 with GPO and STP
+prime	^[Z	^[[?1;6c	vt100	vt100	DEC VT100 with GPO and AVO
+prime	^[Z	^[[?1;7c	vt100	vt100	DEC VT100 with GPO, STP, AVO
+
+prime	^[Z	^[[?6;2c	vt100	-	Uniterm VT100 Emulator
+prime	^[Z	^[[0n		vt100	-	AT&T Unix PC 7300
+prime	^[Z	^[[?12c		vt100	-	Concept from Pro 350/UNIX
+prime	^[Z	^[[?6c		vt100	-	Generic VT100
+prime	^[Z	^[[?8c		vt100	-	TeleVideo 970
+prime	^[Z	^[[?;c		vt100	-	Concept From Pro 350/UNIX
+prime	^[Z	^[[?l;0c	vt100	-	AT&T Unix PC 7300
+
+prime	^[Z	^[[?62;1;2;6;7;8;9c	vt220	vt100	DEC VT220
+prime	^[Z	^[[?62;1;2;6;7;8c	vt220	vt100	DEC VT220
+prime	^[Z	^[[?62;1;4;6;7;8;9;15c	vt200-sb vt200	MicroVAX-II VMS
+
+#
+# PC terminal emulaters
+#
+prime	^[Z     ^[[?63;1;2;4;8;9;15c	vt320	-	Kermit VT320
+prime	^[Z     ^[[?62;1;2;4;8;9;15c	vt220	-	Kermit VT220
+prime	^[Z     ^[[?62;2;6;8;9c		vt220	-	LWP VT220 7bit
+prime	^[Z     ^[?62;2;6;8;9c		vt220	-	LWP VT220 8bit
+prime	^[Z     ^[[?1c			vt100	-	Kermit VT100
+
+prime	^[Z	^[/Z		vt52	-	Generic DEC VT52
+
+prime	^[Z	^[/K		z29	-	Zenith Z-29
+prime	^[Z	^[iB0		z29	-	Zenith Z-29
+
+prime	^[Z	^[[62;1;2;6;8c	f220	-	Freedom 220 DEC clone
+prime	^[Z	^[[=1;1c	avt-4p-s -	Concept with 4 pages memory
+prime	^[Z	^[[=1;2c	avt-8p-s -	Concept with 8 pages memory
+prime	^[Z	^[[?10c		la120	-	DEC Writer III
+prime	^[Z	^[[?12;7;0;102c vt125	-	DEC Pro 350 in vt125 mode
+prime	^[Z	^[[?1;11c	cit101e -	CIE CIT-101 Enhanced w/Graphics
+prime	^[Z	^[[?63;1;2;6;7;8c tvi9220 -	TeleVideo 9220
+prime	^[Z	^[[?8;8;6c	att630	-	AT&T 630 MTG
+
+second	^[[>c	^[[?1;20;0c	vt100	vt100	Real DEC VT100 or Clone
+second	^[[>c	^[[?1;2c	vt100	xterm	XTerm Terminal Emulator
+
+second	^[[<0I	^[[<2;3;40I	vt300	fa300	Falco VT300 version 3.40
+second	^[[<0I	^[[<2;3;42I	vt300	fa300	Falco VT300 version 3.42
+second	^[[<0I	^[[<2;3;43I	vt300	fa300	Falco VT300 version 3.43
+second	^[[<0I	^[[<2;4;00I	vt300	fa300	Falco VT300 version 4.00
+second	^[[<0I	^[[<2;4;10I	vt300	fa300	Falco VT300 version 4.10
+second	^[[<0I	^[[<2;4;11I	vt300	fa300	Falco VT300 version 4.11
+second	^[[<0I	^[[<2;4;12I	vt300	fa300	Falco VT300 version 4.12
+second	^[[<0I	^[[<4;4;00I	vt300	fa300	Falco VT300 version 4.00
+second	^[[>c	^[[>28;11;0c	vt300	vt300	Ultrix VT300
+
+second	^[[<0I	^[[<2;3;21I	vt200	fa200	Falco VT200 version 3.21
+second	^[[<0I	^[[<2;3;40I	vt200	fa200	Falco VT200 version 3.40
+second	^[[<0I	^[[<2;3;43I	vt200	fa200	Falco VT200 version 3.43
+second	^[[<0I	^[[<2;30I	vt200	fa200	Falco VT200 version 3.30
+second	^[[<0I	^[[<2;32I	vt200	fa200	Falco VT200 version 3.40
+second	^[[<0I	^[[<2;4;10I	vt200	fa200	Falco VT300 version 4.10
+second	^[[<0I	^[[<2;4;11I	vt200	fa200	Falco VT300 version 4.11
+second	^[[>c	^[[>2;22;0c	vt200	vt200	DEC real VT240
+second	^[[>c	^[[>1;20;0c	vt200	vt200	DEC real VT220
+
+second	^[[>c	^[[?1;0c	vt100	vt100	Base DEC VT100
+
+second	^[[>0c	^[[>1;20;0c	ovt100	vt100	Old-style DEC VT100

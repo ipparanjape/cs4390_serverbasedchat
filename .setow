@@ -1,0 +1,18 @@
+# $Id: .setow,v 1.1 1998/05/02 21:21:14 amos Exp $
+setenv OPENWINHOME     /usr/local/openwin
+setenv PUBHOME         /usr/local/publisher
+
+# Generic path
+set spath       = ( /usr/lang /usr/ucb /usr/bin /bin /etc /usr/etc )
+set upath       = ( ~/`arch`bin . )
+set lpath       = ( /usr/local/bin /usr/local/backup/bin /usr/local/guide/bin )
+set xpath       = ( /usr/local/X11/bin /usr/local/bin/X11 )
+set xpath       = ( $xpath /usr/local/openwin/bin/xview   )
+set xpath       = ( $xpath /usr/local/openwin/demo/xview  )
+set pubpath	= ( $PUBHOME/bin $PUBHOME/bin/`arch` )
+set opath       = ( $OPENWINHOME/bin $OPENWINHOME/demo )
+
+setenv LD_LIBRARY_PATH "$OPENWINHOME/lib:/usr/local/X11/lib:/usr/local/lib:/usr/lib"
+setenv MANPATH "$OPENWINHOME/share/man:/usr/local/X11/man:/usr/share/man:/usr/lang/man"
+set path = ( $opath $xpath $lpath $spath $pubpath $upath )
+# $Source: /warez/home/skel/src/RCS/.setow,v $

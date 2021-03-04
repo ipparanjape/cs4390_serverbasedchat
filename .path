@@ -1,0 +1,27 @@
+# $Id: .path,v 1.1 1998/05/02 21:19:18 amos Exp $
+BEGIN { ORS = ":" } 
+{ 
+for (i=1; i <= NF; i++)
+  path[i] = $i
+
+#print "i=" i
+#for (j=1; j <= i; j++)
+#  print path[j]
+
+} END { for (x=1; x < i; x++)
+          {
+          for (y=x+1; y < i; y++)
+            {
+              if ( path[x] == path[y] )
+                path[y] = ""
+#                print path[x]
+            } 
+          }
+
+       for (x=1; x < i; x++)
+	 {
+	 if ( path[x] != "" ) 
+	   print path[x]
+	 }
+}
+# $Source: /warez/home/skel/src/RCS/.path,v $

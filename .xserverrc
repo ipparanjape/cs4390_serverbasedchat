@@ -1,0 +1,45 @@
+#!/bin/sh
+# $Id: .xserverrc,v 1.1 1998/05/02 21:23:54 amos Exp $
+#
+# This script could be better.  If "-authtype" is going to be used, it should
+# be the very first option passed.
+
+AUTH=0
+
+if [ "$1" = "-authtype" ]; then
+    shift
+    if [ "$1" = "magic-cookie" ]; then
+        AUTH=1
+    else
+        echo "Unsupported authtype value: $1."
+        exit 1
+    fi
+    shift
+fi
+
+# The following sets up a session-specific magic cookie and installs it
+# in the .Xauthority file, so that MIT-MAGIC-COOKIE authorization will work.
+if [ $AUTH -eq 1 ]; then
+    if [ ! \( -d $HOME -a -w $HOME \) ]; then
+        echo "Home directory is not writeable; writing authority file in /tmp."
+        echo "You won't be able to connect to your X session from other machines."
+        XAUTHORITY=/tmp/.Xauthority.$$
+    else
+        XAUTHORITY=$HOME/.Xauthority
+    fi
+    export XAUTHORITY
+
+    # This should probably be tougher to crack, but it's not too bad ...
+    key=`perl -e 'srand(time|$$);print int(rand(100000000000000000));'`
+    # use $key$key to make sure even length.
+    key=$key$key
+
+    # add to auth file.
+    thishost=`uname -n`
+    xauth add ${thishost}/unix:0 . $key
+    xauth add ${thishost}.utdallas.edu:0 . $key
+fi
+
+# we *must* do an exec for the server so that signals are handled properly
+exec X -auth $XAUTHORITY ${1+"$@"}
+# $Source: /warez/home/skel/src/RCS/.xserverrc,v $
